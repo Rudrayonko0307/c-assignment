@@ -1,15 +1,12 @@
-//Without using third variable
-#include<stdio.h>
+#include <stdio.h>
 int main()
 {
-	int a, b;
-	printf("Enter value of A: ");
-	scanf("%d", & a);
-	printf("Enter value of B: ");
-	scanf("%d", & b);
-	printf("A = %d, B = %d", a, b);
-	a = a + b;
-	b = a - b;
-	a = a - b;
-	printf("\nNow, A = %d, B = %d", a, b);
+  int num1, num2, num3, max;
+   printf("Enter three numbers: ");
+   scanf("%d%d%d", &num1, &num2, &num3);
+   max = (num1 > num2 && num1 > num3) ? num1:
+          (num2 > num3) ? num2 : num3;
+    printf("\nMaximum between %d, %d and %d = %d", num1, num2, num3, max);
+    
+    return 0;
 }
