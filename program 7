@@ -1,12 +1,24 @@
 #include <stdio.h>
+#define BITS sizeof(int)                              
+
 int main()
 {
-    int num;
+    int num,a,msb;
     printf("Enter any number: ");
+    scanf("%d", &a);
+    printf("Enter any number for msb: ");
     scanf("%d", &num);
+
     if(num & 1)
-        printf("LSB of %d is set (1).", num);
+        printf("LSB of %d is set (1).\n", a);
     else
-        printf("LSB of %d is unset (0).", num);
+        printf("LSB of %d is unset (0).\n",a);
+        
+    msb = 1 << (BITS - 1);
+    if(num & msb)
+        printf("MSB of %d is set (1).\n", num);
+    else
+        printf("MSB of %d is unset (0).\n", num);
+
     return 0;
 }
